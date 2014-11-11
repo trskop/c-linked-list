@@ -38,8 +38,8 @@
 #include <stdbool.h>
 #include <string.h>     /* memset() */
 
-#if __STDC_VERSION__ >= 199901L
-/* Standards C99 and C11 understand "inline" keyword. */
+#if __STDC_VERSION__ >= 199901L || defined(__cplusplus)
+/* Standards C99 and C11 understand "inline" keyword as well as C++. */
 #define INLINE static inline
 #else
 #define INLINE static
